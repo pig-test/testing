@@ -1,5 +1,5 @@
 {
-  "name": "div-testing",
+  "name": "@pig-test/div-testing",
   "version": "1.0.1",
   "description": "1",
   "main": "index.js",
