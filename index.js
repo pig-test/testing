@@ -1,4 +1,4 @@
 const hello = (name) =>{
-    console.log("Your name is : ",name)
+    console.log("Your name is Mr: ",name)
 }
 module.exports = hello;
