@@ -15,7 +15,7 @@ jobs:
           node-version: 12
           registry-url: https://npm.pkg.github.com/
           scope: '@pig-test'
-      - run: npm install
-      - run: npm publish
+      - run: yarn install
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
