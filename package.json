@@ -1,12 +1,8 @@
 {
-  "name": "@pig-test/div-testing",
-  "version": "1.0.1",
+  "name": "div-testing1",
+  "version": "1.0.2",
   "description": "1",
   "main": "index.js",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@pig-test"
-    
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
