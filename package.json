@@ -1,10 +1,10 @@
 {
-  "name": "@pig-test/div-testing",
-  "version": "1.0.5",
+  "name": "div-testing2",
+  "version": "1.0.6",
   "description": "",
   "main": "index.js",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@pig-test"
+    "registry": "https://npm.pkg.github.com/@anindyacr7"
   },
   "repository":"https://github.com/pig-test/testing.git",
   "scripts": {
