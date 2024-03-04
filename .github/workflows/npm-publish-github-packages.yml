@@ -13,8 +13,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 16
-          registry-url: https://npm.pkg.github.com/
-          scope: '@pig-test'
+          registry-url: https://registry.npmjs.org/
+          scope: '@anindyacr7'
           always-auth: true
       - run: npm install
       - run: npm publish
