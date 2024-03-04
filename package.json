@@ -1,6 +1,6 @@
 {
-  "name": "div-testing2",
-  "version": "1.0.9",
+  "name": "div-testing",
+  "version": "1.0.10",
   "description": "",
   "main": "index.js",
   "publishConfig": {
