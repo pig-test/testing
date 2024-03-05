@@ -1,3 +1,3 @@
-//registry.npmjs.org/:_authToken=${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}
+//registry.npmjs.org/:_authToken=${npm_npm_5zkAvTAUXNgQDBoe8dVcgzf61shrps3gxjUY}
 registry=https://registry.npmjs.org/
 always-auth=true
