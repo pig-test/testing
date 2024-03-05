@@ -1,11 +1,8 @@
 {
-  "name": "div-testing",
+  "name": "anindya-testing",
   "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
   "repository":"https://github.com/pig-test/testing.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -14,7 +14,6 @@ jobs:
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-          scope: '@anindyacr7'
           always-auth: true
       - run: npm config set registry https://registry.npmjs.org/
       - run: npm install
