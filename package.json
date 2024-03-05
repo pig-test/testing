@@ -1,6 +1,6 @@
 {
-  "name": "@anindyacr7/anindya-testing",
-  "version": "1.0.11",
+  "name": "anindya-testing",
+  "version": "1.0.12",
   "description": "",
   "main": "index.js",
   "repository":"https://github.com/pig-test/testing.git",
