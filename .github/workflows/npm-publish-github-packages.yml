@@ -17,6 +17,6 @@ jobs:
           always-auth: true
       - run: npm config set registry https://registry.npmjs.org/
       - run: npm install
-      - run: npm publish
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: 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
