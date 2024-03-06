@@ -3,7 +3,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - master-pkg
+      - my-publish-pk
 
 jobs:
   publish-gpr:
@@ -13,10 +13,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 16
-          registry-url: https://npm.pkg.github.com/
+          registry-url:  
           scope: '@pig-test'
           always-auth: true
       - run: npm install
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: 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
+          NODE_AUTH_TOKEN: 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

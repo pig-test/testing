@@ -1,0 +1,6 @@
+# It is important to include a trailing slash in the registry URL, otherwise yarn may have trouble connecting to your registry.
+
+# To authenticate when using npm, pnpm, or yarn v1, create a .npmrc file in the root of your project (or wherever your package.json file lives).
+# For yarn v2 (or later) you will need to create a .yarnrc.yml file. Then add one of the following snippets to the file.
+
+# https://fontawesome.com/docs/web/setup/packages
