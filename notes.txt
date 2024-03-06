@@ -4,3 +4,6 @@
 # For yarn v2 (or later) you will need to create a .yarnrc.yml file. Then add one of the following snippets to the file.
 
 # https://fontawesome.com/docs/web/setup/packages
+
+
+npm login --registry=https://npm.pkg.github.com --scope=@pig-test
