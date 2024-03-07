@@ -3,7 +3,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - master-pk
+      - npm-storybook-github-actions-merge-changes
 
 jobs:
   publish-gpr:
@@ -20,4 +20,16 @@ jobs:
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.MY_NPM_TOKEN_2 }}
+      - name: StoryBook Build
+        run : |
+            npm run build-storybook 
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+        args: --acl public-read --follow-symlinks --delete
+        env:
+        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        AWS_REGION: 'ap-south-1'   
+        SOURCE_DIR: 'storybook-static'
 
