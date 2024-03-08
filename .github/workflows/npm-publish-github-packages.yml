@@ -22,8 +22,6 @@ jobs:
       - name: StoryBook Build
         run : |
             npm run build-storybook --prefix ./common-components
-      - name: root directory
-        run: cd ..
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.MY_NPM_TOKEN_2 }}
