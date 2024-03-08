@@ -16,14 +16,12 @@ jobs:
           registry-url:  
           scope: '@pig-test'
           always-auth: true
-      - name: Change directory
-        run: cd common-components
-      - run: npm install
-      - run: npm run
-      - run: npm run build
+      - run: npm install --prefix ./common-components
+      - run: npm run --prefix ./common-components
+      - run: npm run build --prefix ./common-components
       - name: StoryBook Build
         run : |
-            npm run build-storybook 
+            npm run build-storybook --prefix ./common-components
       - name: root directory
         run: cd ..
       - run: npm publish
