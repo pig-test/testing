@@ -1,0 +1,8 @@
+{
+    "name": "cliq-common-components/Page",
+    "types": "../dist/Page/index.d.ts",
+    "main": "../dist/Page/index.js",
+    "module": "../dist/Page/index.js",
+    "es2015": "../dist/Page/index.js",
+    "sideEffects": false
+}

@@ -17,12 +17,18 @@ jobs:
           scope: '@pig-test'
           always-auth: true
       - run: npm install
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.MY_NPM_TOKEN_2 }}
+      - name: Change directory
+        run: cd common-components
+      - run: npm build
       - name: StoryBook Build
         run : |
             npm run build-storybook 
+      - name: root directory
+        run: cd ..
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.MY_NPM_TOKEN_2 }}
+      
       - uses: jakejarvis/s3-sync-action@master
         with:
           args: --acl public-read --follow-symlinks --delete
@@ -31,5 +37,5 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'ap-south-1'   
-          SOURCE_DIR: 'storybook-static'
+          SOURCE_DIR: 'common-components\storybook-static'
 

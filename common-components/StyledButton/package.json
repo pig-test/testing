@@ -1,0 +1,8 @@
+{
+    "name": "cliq-common-components/StyledButton",
+    "types": "../dist/StyledButton/index.d.ts",
+    "main": "../dist/StyledButton/index.js",
+    "module": "../dist/StyledButton/index.js",
+    "es2015": "../dist/StyledButton/index.js",
+    "sideEffects": false
+}
