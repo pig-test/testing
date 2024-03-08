@@ -16,9 +16,9 @@ jobs:
           registry-url:  
           scope: '@pig-test'
           always-auth: true
-      - run: npm install
       - name: Change directory
         run: cd common-components
+      - run: npm install
       - run: npm run
       - run: npm run build
       - name: StoryBook Build
