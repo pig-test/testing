@@ -3,7 +3,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - npm-storybook-github-actions-merge-changes
+      - testing-storybook-and-npm-registry
 
 jobs:
   publish-gpr:
