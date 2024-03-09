@@ -21,7 +21,7 @@ jobs:
         run: npm run build
       - name: StoryBook Build
         run : |
-            npm run build-storybook --prefix ./common-components
+            npm run build-storybook
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.MY_NPM_TOKEN_2 }}
