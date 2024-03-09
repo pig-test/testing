@@ -1,0 +1,8 @@
+{
+    "name": "cliq-common-components/Header",
+    "types": "../dist/Header/index.d.ts",
+    "main": "../dist/Header/index.js",
+    "module": "../dist/Header/index.js",
+    "es2015": "../dist/Header/index.js",
+    "sideEffects": false
+}

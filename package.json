@@ -1,14 +1,141 @@
 {
-  "name": "div-testing1",
-  "version": "1.0.3",
-  "description": "1",
-  "main": "index.js",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Divyansh Srivastava",
-  "license": "ISC"
+    "name": "cliq-common-components",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org/"
+      },
+    "repository": "https://github.com/pig-test/testing.git",
+    "scripts": {
+        "build": "npm run update-pkg && npm run build:types && rollup -c",
+        "update-pkg": "node prepare-package.json.js",
+        "build:types": "tsc -d --declarationDir dist/ --emitDeclarationOnly",
+        "storybook": "storybook dev -p 6006 --debug-webpack",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build-storybook": "storybook build"
+    },
+    "author": "",
+    "license": "ISC",
+    "peerDependencies": {
+        "react": ">=18",
+        "react-dom": ">=18",
+        "styled-components": ">=6"
+    },
+    "devDependencies": {
+        "@babel/cli": "7.23.9",
+        "@babel/core": "7.23.9",
+        "@babel/preset-env": "7.23.9",
+        "@babel/preset-react": "7.23.3",
+        "@rollup/plugin-babel": "^6.0.4",
+        "@rollup/plugin-commonjs": "^21.1.0",
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-node-resolve": "^13.3.0",
+        "@storybook/addon-essentials": "^7.6.15",
+        "@storybook/addon-interactions": "^7.6.15",
+        "@storybook/addon-links": "^7.6.15",
+        "@storybook/addon-onboarding": "^1.0.11",
+        "@storybook/addon-styling-webpack": "^0.0.6",
+        "@storybook/blocks": "^7.6.15",
+        "@storybook/react": "^7.6.15",
+        "@storybook/react-webpack5": "^7.6.15",
+        "@storybook/test": "^7.6.15",
+        "autoprefixer": "^10.4.17",
+        "babel-plugin-styled-components": "^2.1.4",
+        "node-sass": "^7.0.3",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "rollup": "^2",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-sourcemaps": "^0.6.3",
+        "rollup-plugin-styles": "^4.0.0",
+        "rollup-plugin-terser": "^7.0.2",
+        "rollup-plugin-typescript2": "^0.31.2",
+        "storybook": "7.6.15",
+        "storybook-addon-next": "^1.8.0",
+        "styled-components": "^6.1.8",
+        "typescript": "^4.9.5"
+    },
+    "componentsComments": [
+        "Ensure to add the component created in the below components list, any component created, but not listed below will be igonred at the compile time",
+        "below components list will be used to create the final exports object.",
+        "each item in components array should be a case-matched name of the Directory for the component"
+    ],
+    "components": [
+        "Button",
+        "Header",
+        "Page",
+        "StyledButton"
+    ],
+    "exportsComments": [
+        "do not modify the below exports Object!",
+        "this will be updated during the build and created afresh consuming the above components list"
+    ],
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "node": {
+                "require": "./dist/index.cjs",
+                "import": "./dist/index.js"
+            },
+            "browser": {
+                "require": "./dist/index.js",
+                "import": "./dist/index.js"
+            },
+            "default": "./dist/index.js"
+        },
+        "./Button": {
+            "types": "./dist/Button/index.d.ts",
+            "node": {
+                "require": "./dist/Button/index.js",
+                "import": "./dist/Button/index.js"
+            },
+            "browser": {
+                "require": "./dist/Button/index.js",
+                "import": "./dist/Button/index.js"
+            },
+            "default": "./dist/Button/index.js"
+        },
+        "./Header": {
+            "types": "./dist/Header/index.d.ts",
+            "node": {
+                "require": "./dist/Header/index.js",
+                "import": "./dist/Header/index.js"
+            },
+            "browser": {
+                "require": "./dist/Header/index.js",
+                "import": "./dist/Header/index.js"
+            },
+            "default": "./dist/Header/index.js"
+        },
+        "./Page": {
+            "types": "./dist/Page/index.d.ts",
+            "node": {
+                "require": "./dist/Page/index.js",
+                "import": "./dist/Page/index.js"
+            },
+            "browser": {
+                "require": "./dist/Page/index.js",
+                "import": "./dist/Page/index.js"
+            },
+            "default": "./dist/Page/index.js"
+        },
+        "./StyledButton": {
+            "types": "./dist/StyledButton/index.d.ts",
+            "node": {
+                "require": "./dist/StyledButton/index.js",
+                "import": "./dist/StyledButton/index.js"
+            },
+            "browser": {
+                "require": "./dist/StyledButton/index.js",
+                "import": "./dist/StyledButton/index.js"
+            },
+            "default": "./dist/StyledButton/index.js"
+        }
+    }
 }

@@ -1,0 +1,8 @@
+{
+    "name": "cliq-common-components/Button",
+    "types": "../dist/Button/index.d.ts",
+    "main": "../dist/Button/index.js",
+    "module": "../dist/Button/index.js",
+    "es2015": "../dist/Button/index.js",
+    "sideEffects": false
+}

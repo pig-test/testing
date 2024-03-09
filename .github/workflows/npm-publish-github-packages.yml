@@ -3,7 +3,7 @@ name: Node.js Package
 on:
   push:
     branches:
-      - master-pkg
+      - npm-storybook-github-actions-merge-changes
 
 jobs:
   publish-gpr:
@@ -13,10 +13,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 16
-          registry-url: https://registry.npmjs.org/
+          registry-url:  
+          scope: '@pig-test'
           always-auth: true
-      - run: npm config set registry https://registry.npmjs.org/
       - run: npm install
-      - run: npm publish --access public
+      - name: Build of Common Components
+        run: npm run build
+      - name: StoryBook Build
+        run : |
+            npm run build-storybook --prefix ./common-components
+      - run: npm publish
         env:
-          NODE_AUTH_TOKEN: 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
+          NODE_AUTH_TOKEN: ${{ secrets.MY_NPM_TOKEN_2 }}
+      - uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'ap-south-1'   
+          SOURCE_DIR: 'storybook-static'
