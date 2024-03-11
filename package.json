@@ -1,6 +1,6 @@
 {
     "name": "cliq-common-components-1",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "",
     "main": "./dist/index.js",
     "module": "./dist/index.js",
@@ -96,11 +96,11 @@
         "./Button": {
             "types": "./dist/Button/index.d.ts",
             "node": {
-                "require": "./dist/Button/index.js",
+                "require": "./dist/Button/index.cjs",
                 "import": "./dist/Button/index.js"
             },
             "browser": {
-                "require": "./dist/Button/index.js",
+                "require": "./dist/Button/index.cjs",
                 "import": "./dist/Button/index.js"
             },
             "default": "./dist/Button/index.js"
@@ -108,11 +108,11 @@
         "./Header": {
             "types": "./dist/Header/index.d.ts",
             "node": {
-                "require": "./dist/Header/index.js",
+                "require": "./dist/Header/index.cjs",
                 "import": "./dist/Header/index.js"
             },
             "browser": {
-                "require": "./dist/Header/index.js",
+                "require": "./dist/Header/index.cjs",
                 "import": "./dist/Header/index.js"
             },
             "default": "./dist/Header/index.js"
@@ -120,11 +120,11 @@
         "./Page": {
             "types": "./dist/Page/index.d.ts",
             "node": {
-                "require": "./dist/Page/index.js",
+                "require": "./dist/Page/index.cjs",
                 "import": "./dist/Page/index.js"
             },
             "browser": {
-                "require": "./dist/Page/index.js",
+                "require": "./dist/Page/index.cjs",
                 "import": "./dist/Page/index.js"
             },
             "default": "./dist/Page/index.js"
@@ -132,11 +132,11 @@
         "./StyledButton": {
             "types": "./dist/StyledButton/index.d.ts",
             "node": {
-                "require": "./dist/StyledButton/index.js",
+                "require": "./dist/StyledButton/index.cjs",
                 "import": "./dist/StyledButton/index.js"
             },
             "browser": {
-                "require": "./dist/StyledButton/index.js",
+                "require": "./dist/StyledButton/index.cjs",
                 "import": "./dist/StyledButton/index.js"
             },
             "default": "./dist/StyledButton/index.js"
