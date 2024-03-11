@@ -33,9 +33,9 @@ const pkg = require("./package.json");
                 {
                     name: `cliq-common-components/${component}`,
                     types: `../dist/${component}/index.d.ts`,
-                    main: `../dist/${component}/index.js`,
+                    main: `../dist/${component}/index.cjs`,
                     module: `../dist/${component}/index.js`,
-                    es2015: `../dist/${component}/index.js`,
+                    es2015: `../dist/${component}/index.cjs`,
                     sideEffects: false,
                 },
                 null,
@@ -45,11 +45,11 @@ const pkg = require("./package.json");
         exports[`./${component}`] = {
             types: `./dist/${component}/index.d.ts`,
             node: {
-                require: `./dist/${component}/index.js`,
+                require: `./dist/${component}/index.cjs`,
                 import: `./dist/${component}/index.js`,
             },
             browser: {
-                require: `./dist/${component}/index.js`,
+                require: `./dist/${component}/index.cjs`,
                 import: `./dist/${component}/index.js`,
             },
             default: `./dist/${component}/index.js`,

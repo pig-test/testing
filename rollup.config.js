@@ -34,6 +34,10 @@ const combinedBuild = {
             file: resolve("dist", "index.js"),
             format: "esm",
         },
+        {
+            file: resolve("dist", "index.cjs"),
+            format: "cjs",
+        },
     ],
     plugins: [...plugins, typescriptPlugin],
 };
@@ -45,6 +49,10 @@ const componentBuilds = pkg.components.map((component) => {
             {
                 file: resolve(`dist/${component}`, "index.js"),
                 format: "esm",
+            },
+            {
+                file: resolve(`dist/${component}`, "index.cjs"),
+                format: "cjs",
             },
         ],
         plugins: [...plugins, typescriptPlugin],
