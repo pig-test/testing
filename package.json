@@ -5,11 +5,15 @@
     "main": "./dist/index.js",
     "module": "./dist/index.js",
     "files": [
-        "dist"
+        "dist",
+        "Button",
+        "Header",
+        "Page",
+        "StyledButton"
     ],
     "publishConfig": {
         "registry": "https://registry.npmjs.org/"
-      },
+    },
     "repository": "https://github.com/pig-test/testing.git",
     "scripts": {
         "build": "npm run update-pkg && npm run build:types && rollup -c",
@@ -137,5 +141,8 @@
             },
             "default": "./dist/StyledButton/index.js"
         }
+    },
+    "dependencies": {
+        "cliq-common-components-1": "^1.0.1"
     }
 }
